@@ -8,6 +8,10 @@
       </ion-header>
       <ion-content>
         <ion-list>
+          <ion-item (click)="closeMenu()">
+            <ion-icon slot="start" name="close"></ion-icon>
+            <ion-label>Close menu</ion-label>
+          </ion-item>
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
             <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
               <ion-icon slot="start" [name]="p.icon"></ion-icon>
